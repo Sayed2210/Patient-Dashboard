@@ -10,6 +10,7 @@ import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 import "@mdi/font/css/materialdesignicons.css";
 import "@fortawesome/fontawesome-free/css/all.css";
+
 // import { aliases, fa } from 'vuetify/iconsets/fa'
 // export default createVuetify({
 //   icons: {

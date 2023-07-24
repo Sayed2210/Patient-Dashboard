@@ -1,55 +1,45 @@
 <template>
   <v-card color="white" class="rounded-lg" flat>
-    <v-sheet tile height="54" class="d-flex">
-      <v-btn icon class="ma-2" @click="calendar.prev()">
-        <v-icon>mdi-chevron-left</v-icon>
-      </v-btn>
-      <v-select
-        :items="types"
-        dense
-        outlined
-        hide-details
-        class="ma-2"
-        label="type"
-      ></v-select>
-      <v-select
-        :items="modes"
-        dense
-        outlined
-        hide-details
-        label="event-overlap-mode"
-        class="ma-2"
-      ></v-select>
-      <v-select
-        :items="weekdays"
-        dense
-        outlined
-        hide-details
-        label="weekdays"
-        class="ma-2"
-      ></v-select>
-      <v-spacer></v-spacer>
-      <v-btn icon class="ma-2" @click="calendar.next()">
-        <v-icon>mdi-chevron-right</v-icon>
-      </v-btn>
-    </v-sheet>
-    <v-sheet height="600">
-      <v-calendar
-        ref="calendar"
-        :weekdays="weekday"
-        :type="type"
-        :event-overlap-mode="mode"
-        :event-overlap-threshold="30"
-      ></v-calendar>
-    </v-sheet>
+    <v-row>
+      <v-col cols="12" sm="6"
+        ><v-img
+          aspect-ratio="16/9"
+          cover
+          src="undraw_medical_care_movn.png"
+        ></v-img>
+      </v-col>
+      <v-col>
+        <v-card flat class="text-start">
+          <v-card-title class="text-h3 text-md-h5 text-lg-h4"
+            >Nursing Care Plans</v-card-title
+          >
+          <v-card-text class="text-medium-emphasis">
+            Let’s take a closer look at how we can effectively care for patients
+            experiencing acute pain. Use this guide to formulate your nursing
+            care plans and nursing interventions for patients experiencing acute
+            pain.</v-card-text
+          >
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" sm="6"
+        ><v-img aspect-ratio="16/9" cover src="coronavirus.png"></v-img>
+      </v-col>
+      <v-col>
+        <v-card flat class="text-start">
+          <v-card-title class="text-h3 text-md-h5 text-lg-h4"
+            >Virus Care Plans</v-card-title
+          >
+          <v-card-text class="text-medium-emphasis">
+            Never before have those of us who are alive today experienced the
+            demands and the collective shock, grief, and feeling of helplessness
+            brought about by the COVID-19 pandemic..</v-card-text
+          >
+        </v-card>
+      </v-col>
+    </v-row>
   </v-card>
 </template>
 
-<script setup>
-import { ref } from "vue";
-const type = ref("month");
-const types = ref(["month", "week", "day", "4days"]);
-const mode = ref("stack");
-const modes = ref(["stack", "column"]);
-const weekdays = ref(["Sun - Sat", "Mon - Sun", "Mon - Fri", "Mon, Wed, Fri"]);
-</script>
+<script setup></script>
